@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40C659F3-038B-4E96-B24F-D16ED2323E34}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FanaticWP8</RootNamespace>
+    <AssemblyName>FanaticWP8</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>FanaticWP8_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>FanaticWP8.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AddNewTeam.xaml.cs">
+      <DependentUpon>AddNewTeam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DELETETHIS.xaml.cs">
+      <DependentUpon>DELETETHIS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="AddNewTeam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DELETETHIS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Logos\MiLB\MiLB.png" />
+    <Content Include="Assets\Logos\MLB\ARI.png" />
+    <Content Include="Assets\Logos\MLB\ATL.png" />
+    <Content Include="Assets\Logos\MLB\BAL.png" />
+    <Content Include="Assets\Logos\MLB\BOS.png" />
+    <Content Include="Assets\Logos\MLB\CHC.png" />
+    <Content Include="Assets\Logos\MLB\CHW.png" />
+    <Content Include="Assets\Logos\MLB\CIN.png" />
+    <Content Include="Assets\Logos\MLB\CLE.png" />
+    <Content Include="Assets\Logos\MLB\COL.png" />
+    <Content Include="Assets\Logos\MLB\DET.png" />
+    <Content Include="Assets\Logos\MLB\HOU.png" />
+    <Content Include="Assets\Logos\MLB\KC.png" />
+    <Content Include="Assets\Logos\MLB\LAA.png" />
+    <Content Include="Assets\Logos\MLB\LAD.png" />
+    <Content Include="Assets\Logos\MLB\MIA.png" />
+    <Content Include="Assets\Logos\MLB\MIL.png" />
+    <Content Include="Assets\Logos\MLB\MIN.png" />
+    <Content Include="Assets\Logos\MLB\MLB.png" />
+    <Content Include="Assets\Logos\MLB\NYM.png" />
+    <Content Include="Assets\Logos\MLB\NYY.png" />
+    <Content Include="Assets\Logos\MLB\OAK.png" />
+    <Content Include="Assets\Logos\MLB\PHI.png" />
+    <Content Include="Assets\Logos\MLB\PIT.png" />
+    <Content Include="Assets\Logos\MLB\SD.png" />
+    <Content Include="Assets\Logos\MLB\SEA.png" />
+    <Content Include="Assets\Logos\MLB\SF.png" />
+    <Content Include="Assets\Logos\MLB\STL.png" />
+    <Content Include="Assets\Logos\MLB\TB.png" />
+    <Content Include="Assets\Logos\MLB\TEX.png" />
+    <Content Include="Assets\Logos\MLB\TOR.png" />
+    <Content Include="Assets\Logos\MLB\WAS.png" />
+    <Content Include="Assets\Logos\MLS\MLS.png" />
+    <Content Include="Assets\Logos\NBA\NBA.png" />
+    <Content Include="Assets\Logos\NFL\ARI.png" />
+    <Content Include="Assets\Logos\NFL\ATL.png" />
+    <Content Include="Assets\Logos\NFL\BAL.png" />
+    <Content Include="Assets\Logos\NFL\BUF.png" />
+    <Content Include="Assets\Logos\NFL\CAR.png" />
+    <Content Include="Assets\Logos\NFL\CHI.png" />
+    <Content Include="Assets\Logos\NFL\CIN.png" />
+    <Content Include="Assets\Logos\NFL\CLE.png" />
+    <Content Include="Assets\Logos\NFL\DAL.png" />
+    <Content Include="Assets\Logos\NFL\DEN.png" />
+    <Content Include="Assets\Logos\NFL\DET.png" />
+    <Content Include="Assets\Logos\NFL\GB.png" />
+    <Content Include="Assets\Logos\NFL\HOU.png" />
+    <Content Include="Assets\Logos\NFL\IND.png" />
+    <Content Include="Assets\Logos\NFL\JAC.png" />
+    <Content Include="Assets\Logos\NFL\KC.png" />
+    <Content Include="Assets\Logos\NFL\MIA.png" />
+    <Content Include="Assets\Logos\NFL\MIN.png" />
+    <Content Include="Assets\Logos\NFL\NE.png" />
+    <Content Include="Assets\Logos\NFL\NFL.png" />
+    <Content Include="Assets\Logos\NFL\NO.png" />
+    <Content Include="Assets\Logos\NFL\NYG.png" />
+    <Content Include="Assets\Logos\NFL\NYJ.png" />
+    <Content Include="Assets\Logos\NFL\OAK.png" />
+    <Content Include="Assets\Logos\NFL\PHI.png" />
+    <Content Include="Assets\Logos\NFL\PIT.png" />
+    <Content Include="Assets\Logos\NFL\SD.png" />
+    <Content Include="Assets\Logos\NFL\SEA.png" />
+    <Content Include="Assets\Logos\NFL\SF.png" />
+    <Content Include="Assets\Logos\NFL\STL.png" />
+    <Content Include="Assets\Logos\NFL\TB.png" />
+    <Content Include="Assets\Logos\NFL\TEN.png" />
+    <Content Include="Assets\Logos\NFL\WAS.png" />
+    <Content Include="Assets\Logos\NHL\DAL.png" />
+    <Content Include="Assets\Logos\NHL\DET.png" />
+    <Content Include="Assets\Logos\NHL\EDM.png" />
+    <Content Include="Assets\Logos\NHL\FLA.png" />
+    <Content Include="Assets\Logos\NHL\LA.png" />
+    <Content Include="Assets\Logos\NHL\MIN.png" />
+    <Content Include="Assets\Logos\NHL\MON.png" />
+    <Content Include="Assets\Logos\NHL\NHL.png" />
+    <Content Include="Assets\Logos\NHL\NJ.png" />
+    <Content Include="Assets\Logos\NHL\NSH.png" />
+    <Content Include="Assets\Logos\NHL\NYI.png" />
+    <Content Include="Assets\Logos\NHL\NYR.png" />
+    <Content Include="Assets\Logos\NHL\OTT.png" />
+    <Content Include="Assets\Logos\NHL\PHI.png" />
+    <Content Include="Assets\Logos\NHL\PHX.png" />
+    <Content Include="Assets\Logos\NHL\PIT.png" />
+    <Content Include="Assets\Logos\NHL\SJ.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Fanatic\Fanatic.csproj">
+      <Project>{1A865E61-F28D-4445-A478-56215C56EE9E}</Project>
+      <Name>Fanatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
