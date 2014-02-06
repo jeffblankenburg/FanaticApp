@@ -13,18 +13,27 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
-	<phone:PhoneApplicationPage.Resources>
-		<Storyboard x:Name="SlideLeagues">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBlock">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-474"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="wrapPanel">
-				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-467"/>
-			</DoubleAnimationUsingKeyFrames>
-		</Storyboard>
-	</phone:PhoneApplicationPage.Resources>
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -32,15 +41,8 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" Text="which league?" Style="{StaticResource PhoneTextTitle1Style}" RenderTransformOrigin="0.5,0.5" >
-        	<TextBlock.RenderTransform>
-        		<CompositeTransform/>
-        	</TextBlock.RenderTransform>
-        </TextBlock>
-        <toolkit:WrapPanel x:Name="wrapPanel" Grid.Row="1" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-        	<toolkit:WrapPanel.RenderTransform>
-        		<CompositeTransform/>
-        	</toolkit:WrapPanel.RenderTransform>
+        <TextBlock x:Name="textBlock" Text="which league?" Style="{StaticResource PhoneTextTitle1Style}" RenderTransformOrigin="0.5,0.5" />
+        <toolkit:WrapPanel x:Name="wrapPanel" Grid.Row="1" HorizontalAlignment="Center">
             <Image Source="Assets/Logos/MLB/MLB.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/NFL/NFL.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/NHL/NHL.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
@@ -48,23 +50,6 @@
             <Image Source="Assets/Logos/MLS/MLS.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/MiLB/MiLB.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
         </toolkit:WrapPanel>
-        <!--<ListBox Grid.Row="1" x:Name="TeamList">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding Abbreviation}" />
-                        <Image Source="{Binding Logo}" />
-                    </Grid>
-                    
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>-->
     </Grid>
 
 </phone:PhoneApplicationPage>

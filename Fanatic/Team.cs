@@ -14,7 +14,7 @@ namespace Fanatic
         public string SecondaryColor { get; set; }
         public string TertiaryColor { get; set; }
         public string Abbreviation { get; set; }
-        public int League { get; set; }
+        public string League { get; set; }
         public string Logo { get; set; }
     }
 }
