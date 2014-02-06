@@ -14,6 +14,15 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard x:Name="TwentiethOfASecond">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="animationTarget">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.025" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+
     <toolkit:TransitionService.NavigationInTransition>
         <toolkit:NavigationInTransition>
             <toolkit:NavigationInTransition.Backward>
@@ -36,29 +45,41 @@
     </toolkit:TransitionService.NavigationOutTransition>
     
     <phone:Panorama Title="fanatic">
-        <phone:PanoramaItem Header="your teams">
+        <phone:PanoramaItem Header="your score">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="120" />
-                    <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="120" />
-                    <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="120" />
+                    <RowDefinition Height="100" />
                     <RowDefinition Height="10" />
-                    <RowDefinition Height="120" />
+                    <RowDefinition Height="100" />
                     <RowDefinition Height="10" />
-                    <RowDefinition Height="120" />
+                    <RowDefinition Height="100" />
                     <RowDefinition Height="10" />
-                    <RowDefinition Height="120" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Rectangle x:Name="Box" Fill="#33FFFFFF"/>
-                <TextBlock Text="+" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" FontSize="60" Margin="0,-15,0,0" />
-                <Ellipse Stroke="White" Fill="Transparent" StrokeThickness="3" Margin="30" Tap="AddNewTeam_Tap"/>
+                <Image Source="Assets/Logos/MLB/ATL.png" />
+                <TextBlock x:Name="Team1Score" Text="6,958" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image Grid.Row="2" Source="Assets/Logos/NFL/CAR.png" />
+                <TextBlock x:Name="Team2Score" Text="2,945" Grid.Row="2" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image Grid.Row="4" Source="Assets/Logos/NHL/CBJ.png" />
+                <TextBlock x:Name="Team3Score" Text="2,945" Grid.Row="4" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Rectangle Fill="White" Grid.Row="6" Grid.ColumnSpan="2" />
+                <TextBlock Text="TOTAL" Grid.Row="7" Grid.Column="0" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="TotalScore" Text="9,953" Grid.Row="7" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="animationTarget" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="267,101,0,0" Grid.Row="8" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
             </Grid>
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Header="your teams">
+            <toolkit:WrapPanel x:Name="TeamPanel" />
         </phone:PanoramaItem>
         <phone:PanoramaItem Header="your tickets">
 

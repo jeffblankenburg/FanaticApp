@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using FanaticWP8.Resources;
+using System.IO.IsolatedStorage;
 
 namespace FanaticWP8
 {
@@ -17,6 +18,8 @@ namespace FanaticWP8
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
+
+        public static IsolatedStorageSettings Settings = IsolatedStorageSettings.ApplicationSettings;
 
         /// <summary>
         /// Constructor for the Application object.
@@ -39,7 +42,7 @@ namespace FanaticWP8
             if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                //Application.Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
@@ -54,6 +57,18 @@ namespace FanaticWP8
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+            if (!Settings.Contains("MLB"))
+            {
+                Settings["MLB"] = null;
+                Settings["MiLB"] = null;
+                Settings["NFL"] = null;
+                Settings["NBA"] = null;
+                Settings["NHL"] = null;
+                Settings["MLS"] = null;
+            }
+
+
 
         }
 

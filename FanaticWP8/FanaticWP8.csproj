@@ -147,6 +147,14 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Backgrounds\Baseball.png" />
+    <Content Include="Assets\Backgrounds\Basketball.png" />
+    <Content Include="Assets\Backgrounds\BrickWall.png" />
+    <Content Include="Assets\Backgrounds\Football.png" />
+    <Content Include="Assets\Backgrounds\Golf.png" />
+    <Content Include="Assets\Backgrounds\Hockey.png" />
+    <Content Include="Assets\Backgrounds\Soccer.png" />
+    <Content Include="Assets\Backgrounds\Tennis.png" />
     <Content Include="Assets\Logos\MiLB\MiLB.png" />
     <Content Include="Assets\Logos\MLB\ARI.png" />
     <Content Include="Assets\Logos\MLB\ATL.png" />
@@ -214,6 +222,14 @@
     <Content Include="Assets\Logos\NFL\TB.png" />
     <Content Include="Assets\Logos\NFL\TEN.png" />
     <Content Include="Assets\Logos\NFL\WAS.png" />
+    <Content Include="Assets\Logos\NHL\ANA.png" />
+    <Content Include="Assets\Logos\NHL\BOS.png" />
+    <Content Include="Assets\Logos\NHL\BUF.png" />
+    <Content Include="Assets\Logos\NHL\CAL.png" />
+    <Content Include="Assets\Logos\NHL\CAR.png" />
+    <Content Include="Assets\Logos\NHL\CBJ.png" />
+    <Content Include="Assets\Logos\NHL\CHI.png" />
+    <Content Include="Assets\Logos\NHL\COL.png" />
     <Content Include="Assets\Logos\NHL\DAL.png" />
     <Content Include="Assets\Logos\NHL\DET.png" />
     <Content Include="Assets\Logos\NHL\EDM.png" />
@@ -231,6 +247,12 @@
     <Content Include="Assets\Logos\NHL\PHX.png" />
     <Content Include="Assets\Logos\NHL\PIT.png" />
     <Content Include="Assets\Logos\NHL\SJ.png" />
+    <Content Include="Assets\Logos\NHL\STL.png" />
+    <Content Include="Assets\Logos\NHL\TB.png" />
+    <Content Include="Assets\Logos\NHL\TOR.png" />
+    <Content Include="Assets\Logos\NHL\VAN.png" />
+    <Content Include="Assets\Logos\NHL\WAS.png" />
+    <Content Include="Assets\Logos\NHL\WIN.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
