@@ -96,9 +96,21 @@ namespace FanaticWP8
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            DateTime date = (DateTime)TicketDate.Value;
+            DateTime time = (DateTime)TicketTime.Value;
             App.TicketBuilder.Section = SectionBox.Text;
             App.TicketBuilder.Row = RowBox.Text;
             App.TicketBuilder.Seat = SeatBox.Text;
+            App.TicketBuilder.Price = PriceBox.Text.ToString();
+            App.TicketBuilder.Notes = NotesBox.Text;
+            App.TicketBuilder.StartTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second);
+            App.TicketBuilder.Location = App.TicketBuilder.HomeTeam.HomeVenue;
+
+            App.Fan.Tickets.Add(App.TicketBuilder);
+            App.TicketBuilder = new Ticket();
+
+            NavigationService.RemoveBackEntry();
+            NavigationService.GoBack();
         }
 
 

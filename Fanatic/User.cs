@@ -17,6 +17,7 @@ namespace Fanatic
         public Team NHL { get; set; }
         public Team MLS { get; set; }
         public Team MiLB { get; set; }
+        public List<Ticket> Tickets = new List<Ticket>();
 
         public User()
         {

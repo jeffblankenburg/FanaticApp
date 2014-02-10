@@ -40,6 +40,95 @@ namespace FanaticWP8
         private void PopulateTicketPanorama()
         {
             ResetTicketPanorama();
+
+            if (App.Fan.Tickets.Count() > 0)
+            {
+
+                List<Ticket> TicketList = (from t in App.Fan.Tickets
+                                           orderby t.StartTime
+                                           select t).ToList();
+
+                for (int i = 0; i < TicketList.Count(); i++)
+                {
+                    Grid g = new Grid();
+                    g.Height = 120;
+                    g.Width = 120;
+                    g.Margin = new Thickness(0, 0, 10, 10);
+                    g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(7) });
+                    g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(50) });
+                    g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(6) });
+                    g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(50) });
+                    g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(7) });
+                    g.RowDefinitions.Add(new RowDefinition { Height = new GridLength(7) });
+                    g.RowDefinitions.Add(new RowDefinition { Height = new GridLength(25) });
+                    g.RowDefinitions.Add(new RowDefinition { Height = new GridLength(25) });
+                    g.RowDefinitions.Add(new RowDefinition { Height = new GridLength(6) });
+                    g.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
+                    g.RowDefinitions.Add(new RowDefinition { Height = new GridLength(7) });
+                    
+                    //Date text
+                    TextBlock date = new TextBlock();
+                    date.Text = TicketList[i].StartTime.ToShortDateString();
+                    date.TextAlignment = TextAlignment.Center;
+                    date.FontSize = 12;
+                    Grid.SetColumn(date, 1);
+                    Grid.SetRow(date, 1);
+                    Grid.SetColumnSpan(date, 3);
+                    g.Children.Add(date);
+
+                    //Venue text
+                    TextBlock venue = new TextBlock();
+                    venue.Text = TicketList[i].Location.Name;
+                    venue.TextAlignment = TextAlignment.Center;
+                    venue.FontSize = 12;
+                    Grid.SetColumn(venue, 1);
+                    Grid.SetRow(venue, 2);
+                    Grid.SetColumnSpan(venue, 3);
+                    g.Children.Add(venue);
+
+                    //Away team
+                    Image image = new Image();
+                    Uri uri = new Uri("Assets/Logos/" + TicketList[i].AwayTeam.League + "/" + TicketList[i].AwayTeam.Abbreviation + ".png", UriKind.Relative);
+                    ImageSource imageSource = new BitmapImage(uri);
+                    image.Source = imageSource;
+                    Grid.SetColumn(image, 1);
+                    Grid.SetRow(image, 4);
+                    g.Children.Add(image);
+
+                    //Home team
+                    image = new Image();
+                    uri = new Uri("Assets/Logos/" + TicketList[i].HomeTeam.League + "/" + TicketList[i].HomeTeam.Abbreviation + ".png", UriKind.Relative);
+                    imageSource = new BitmapImage(uri);
+                    image.Source = imageSource;
+                    Grid.SetColumn(image, 3);
+                    Grid.SetRow(image, 4);
+                    g.Children.Add(image);
+
+                    TicketPanel.Children.Add(g);
+
+                    //Grid g = new Grid();
+                    //g.Width = 120;
+                    //g.Height = 120;
+                    //g.Margin = new Thickness(0, 0, 10, 10);
+                    //Rectangle r = new Rectangle();
+                    //r.Fill = new SolidColorBrush(Color.FromArgb(0x33, 0xFF, 0xFF, 0xFF));
+                    //g.Children.Add(r);
+                    //TextBlock t = new TextBlock();
+                    //t.Text = "+";
+                    //t.VerticalAlignment = VerticalAlignment.Center;
+                    //t.HorizontalAlignment = HorizontalAlignment.Center;
+                    //t.TextAlignment = TextAlignment.Center;
+                    //t.FontSize = 60;
+                    //t.Margin = new Thickness(0, -15, 0, 0);
+                    //g.Children.Add(t);
+                    //Ellipse e = new Ellipse();
+                    //e.Stroke = new SolidColorBrush(Colors.White);
+                    //e.Fill = new SolidColorBrush(Colors.Transparent);
+                    //e.StrokeThickness = 3;
+                    //e.Margin = new Thickness(30);
+                    //g.Children.Add(e);
+                }
+            }
         }
 
         void TwentiethOfASecond_Completed(object sender, EventArgs e)
