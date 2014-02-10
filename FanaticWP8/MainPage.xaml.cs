@@ -34,6 +34,12 @@ namespace FanaticWP8
             TwentiethOfASecond.Completed += TwentiethOfASecond_Completed;
             DisplayTotals();
             PopulateTeamPanorama();
+            PopulateTicketPanorama();
+        }
+
+        private void PopulateTicketPanorama()
+        {
+            ResetTicketPanorama();
         }
 
         void TwentiethOfASecond_Completed(object sender, EventArgs e)
@@ -45,34 +51,34 @@ namespace FanaticWP8
         {
             ResetTeamPanorama();
             
-            if (App.Settings["MLB"] != null)
+            if (App.Fan.MLB.Abbreviation != "NONE")
             {
-                Team t = (Team)App.Settings["MLB"];
+                Team t = App.Fan.MLB;
                 TeamPanel.Children.Add(BuildImage(t));
             }
-            if (App.Settings["NFL"] != null)
+            if (App.Fan.NFL.Abbreviation != "NONE")
             {
-                Team t = (Team)App.Settings["NFL"];
+                Team t = App.Fan.NFL;
                 TeamPanel.Children.Add(BuildImage(t));
             }
-            if (App.Settings["NBA"] != null)
+            if (App.Fan.NBA.Abbreviation != "NONE")
             {
-                Team t = (Team)App.Settings["NBA"];
+                Team t = App.Fan.NBA;
                 TeamPanel.Children.Add(BuildImage(t));
             }
-            if (App.Settings["NHL"] != null)
+            if (App.Fan.NHL.Abbreviation != "NONE")
             {
-                Team t = (Team)App.Settings["NHL"];
+                Team t = App.Fan.NHL;
                 TeamPanel.Children.Add(BuildImage(t));
             }
-            if (App.Settings["MLS"] != null)
+            if (App.Fan.MLS.Abbreviation != "NONE")
             {
-                Team t = (Team)App.Settings["MLS"];
+                Team t = App.Fan.MLS;
                 TeamPanel.Children.Add(BuildImage(t));
             }
-            if (App.Settings["MiLB"] != null)
+            if (App.Fan.MiLB.Abbreviation != "NONE")
             {
-                Team t = (Team)App.Settings["MiLB"];
+                Team t = App.Fan.MiLB;
                 TeamPanel.Children.Add(BuildImage(t));
             }
         }
@@ -94,7 +100,23 @@ namespace FanaticWP8
         private void ResetTeamPanorama()
         {
             TeamPanel.Children.Clear();
+            Grid g = BuildAddButton();
+            Ellipse e = g.Children[2] as Ellipse;
+            e.Tap += AddNewTeam_Tap;
+            TeamPanel.Children.Add(g);
+        }
 
+        private void ResetTicketPanorama()
+        {
+            TicketPanel.Children.Clear();
+            Grid g = BuildAddButton();
+            Ellipse e = g.Children[2] as Ellipse;
+            e.Tap += AddNewTicket_Tap;
+            TicketPanel.Children.Add(g);
+        }
+
+        private Grid BuildAddButton()
+        {
             Grid g = new Grid();
             g.Width = 120;
             g.Height = 120;
@@ -115,9 +137,8 @@ namespace FanaticWP8
             e.Fill = new SolidColorBrush(Colors.Transparent);
             e.StrokeThickness = 3;
             e.Margin = new Thickness(30);
-            e.Tap += AddNewTeam_Tap;
             g.Children.Add(e);
-            TeamPanel.Children.Add(g);
+            return g;
         }
 
         private void Team_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -127,7 +148,12 @@ namespace FanaticWP8
 
         private void AddNewTeam_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/AddNewTeam.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/SelectLeague.xaml?actionpage=SelectTeam.xaml", UriKind.Relative));
+        }
+
+        private void AddNewTicket_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/SelectLeague.xaml?actionpage=AddNewTicket.xaml", UriKind.Relative));
         }
 
         private void DisplayTotals()

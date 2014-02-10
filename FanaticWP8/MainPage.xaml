@@ -82,7 +82,7 @@
             <toolkit:WrapPanel x:Name="TeamPanel" />
         </phone:PanoramaItem>
         <phone:PanoramaItem Header="your tickets">
-
+            <toolkit:WrapPanel x:Name="TicketPanel" />
         </phone:PanoramaItem>
         <phone:PanoramaItem Header="your badges">
 

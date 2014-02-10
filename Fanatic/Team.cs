@@ -16,5 +16,6 @@ namespace Fanatic
         public string Abbreviation { get; set; }
         public string League { get; set; }
         public string Logo { get; set; }
+        public Venue HomeVenue { get; set; }
     }
 }
