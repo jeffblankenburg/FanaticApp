@@ -80,7 +80,7 @@ namespace FanaticWP8
                                           new Team { League = "NFL", Abbreviation = "STL", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "St. Louis", Mascot = "Rams" },
                                           new Team { League = "NFL", Abbreviation = "TB",  PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Tampa Bay", Mascot = "Buccaneers" },
                                           new Team { League = "NFL", Abbreviation = "TEN", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Tennessee", Mascot = "Titans" },
-                                          new Team { League = "NFL", Abbreviation = "WAS", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Washington", Mascot = "Redskins" },};
+                                          new Team { League = "NFL", Abbreviation = "WAS", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Washington", Mascot = "Redskins" }};
 
         List<Team> NHL = new List<Team> { new Team { League = "NHL", Abbreviation = "ANA", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Arizona", Mascot = "Diamondbacks" },
                                           new Team { League = "NHL", Abbreviation = "BOS", PrimaryColor = "01487E", SecondaryColor = "D60D39", TertiaryColor = "FFFFFF", City = "Atlanta", Mascot = "Braves" },
@@ -132,8 +132,38 @@ namespace FanaticWP8
                                           new Team { League = "MLS", Abbreviation = "SJ",  PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Minnesota", Mascot = "Twins" },
                                           new Team { League = "MLS", Abbreviation = "TOR", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "New York", Mascot = "Mets" },
                                           new Team { League = "MLS", Abbreviation = "VAN", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "New York", Mascot = "Yankees" }};
-        
-        List<Team> NBA = new List<Team>();
+
+        List<Team> NBA = new List<Team> { new Team { League = "NBA", Abbreviation = "ATL", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Arizona", Mascot = "Cardinals" },
+                                          new Team { League = "NBA", Abbreviation = "BKN", PrimaryColor = "01487E", SecondaryColor = "D60D39", TertiaryColor = "FFFFFF", City = "Atlanta", Mascot = "Falcons" },
+                                          new Team { League = "NBA", Abbreviation = "BOS", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Baltimore", Mascot = "Ravens" },
+                                          new Team { League = "NBA", Abbreviation = "CHA", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Buffalo", Mascot = "Bills" },
+                                          new Team { League = "NBA", Abbreviation = "CHI", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Carolina", Mascot = "Panthers" },
+                                          new Team { League = "NBA", Abbreviation = "CLE", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Chicago", Mascot = "Bears" },
+                                          new Team { League = "NBA", Abbreviation = "DAL", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Cincinnati", Mascot = "Bengals" },
+                                          new Team { League = "NBA", Abbreviation = "DEN", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Cleveland", Mascot = "Browns" },
+                                          new Team { League = "NBA", Abbreviation = "DET", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Dallas", Mascot = "Cowboys" },
+                                          new Team { League = "NBA", Abbreviation = "GS",  PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Denver", Mascot = "Broncos" },
+                                          new Team { League = "NBA", Abbreviation = "HOU", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Detroit", Mascot = "Lions" },
+                                          new Team { League = "NBA", Abbreviation = "IND", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Green Bay", Mascot = "Packers" },
+                                          new Team { League = "NBA", Abbreviation = "LAC", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Houston", Mascot = "Texans" },
+                                          new Team { League = "NBA", Abbreviation = "LAL", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Indianapolis", Mascot = "Colts" },
+                                          new Team { League = "NBA", Abbreviation = "MEM", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Jacksonville", Mascot = "Jaguars" },
+                                          new Team { League = "NBA", Abbreviation = "MIA", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Kansas City", Mascot = "Chiefs" },
+                                          new Team { League = "NBA", Abbreviation = "MIL", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Miami", Mascot = "Dolphins" },
+                                          new Team { League = "NBA", Abbreviation = "MIN", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Minnesota", Mascot = "Vikings" },
+                                          new Team { League = "NBA", Abbreviation = "NO",  PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "New England", Mascot = "Patriots" },
+                                          new Team { League = "NBA", Abbreviation = "NYK", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "New Orleans", Mascot = "Saints" },
+                                          new Team { League = "NBA", Abbreviation = "OKC", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "New York", Mascot = "Giants" },
+                                          new Team { League = "NBA", Abbreviation = "ORL", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "New York", Mascot = "Jets" },
+                                          new Team { League = "NBA", Abbreviation = "PHI", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Oakland", Mascot = "Raiders" },
+                                          new Team { League = "NBA", Abbreviation = "PHX", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Philadelphia", Mascot = "Eagles" },
+                                          new Team { League = "NBA", Abbreviation = "POR", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Pittsburgh", Mascot = "Steelers" },
+                                          new Team { League = "NBA", Abbreviation = "SA",  PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "San Diego", Mascot = "Chargers" },
+                                          new Team { League = "NBA", Abbreviation = "SAC", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Seattle", Mascot = "Seahawks" },
+                                          new Team { League = "NBA", Abbreviation = "TOR", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "San Francisco", Mascot = "49ers" },
+                                          new Team { League = "NBA", Abbreviation = "UTAH",PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "St. Louis", Mascot = "Rams" },
+                                          new Team { League = "NBA", Abbreviation = "WAS", PrimaryColor = "A71930", SecondaryColor = "DBCEAC", TertiaryColor = "000000", City = "Tampa Bay", Mascot = "Buccaneers" }};
+
         List<Team> MiLB = new List<Team>();
         
         public SelectTeam()
