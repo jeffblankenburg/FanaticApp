@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Fanatic
 {
-    public enum League
+    public enum RoofType
     {
-        MLB, NFL, NBA, NHL, MLS, MiLB, FAPL
+        Open, Retractable, Dome
     }
 }

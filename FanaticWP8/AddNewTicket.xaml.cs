@@ -36,7 +36,10 @@ namespace FanaticWP8
             if (CurrentLeague == "")
                 NavigationService.GoBack();
             else
+            {
+                LayoutRoot.Background = App.GetBackground(CurrentLeague);
                 LoadData();
+            }
         }
 
         private void LoadData()

@@ -16,6 +16,7 @@ namespace Fanatic
         public string ZipCode { get; set; }
         public int Capacity { get; set; }
         public Surface SurfaceType { get; set; }
+        public RoofType RoofType { get; set; }
         public int OpeningYear { get; set; }
     }
 }

@@ -97,14 +97,8 @@
     <Compile Include="AddNewTicket.xaml.cs">
       <DependentUpon>AddNewTicket.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddNewTicketDetail.xaml.cs">
-      <DependentUpon>AddNewTicketDetail.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DELETETHIS.xaml.cs">
-      <DependentUpon>DELETETHIS.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -130,14 +124,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddNewTicket.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AddNewTicketDetail.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DELETETHIS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,13 +154,14 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Backgrounds\Baseball.png" />
-    <Content Include="Assets\Backgrounds\Basketball.png" />
+    <Content Include="Assets\Backgrounds\MiLB.png" />
+    <Content Include="Assets\Backgrounds\MLB.png" />
+    <Content Include="Assets\Backgrounds\NBA.png" />
     <Content Include="Assets\Backgrounds\BrickWall.png" />
-    <Content Include="Assets\Backgrounds\Football.png" />
+    <Content Include="Assets\Backgrounds\NFL.png" />
     <Content Include="Assets\Backgrounds\Golf.png" />
-    <Content Include="Assets\Backgrounds\Hockey.png" />
-    <Content Include="Assets\Backgrounds\Soccer.png" />
+    <Content Include="Assets\Backgrounds\NHL.png" />
+    <Content Include="Assets\Backgrounds\MLS.png" />
     <Content Include="Assets\Backgrounds\Tennis.png" />
     <Content Include="Assets\Logos\MiLB\MiLB.png" />
     <Content Include="Assets\Logos\MLB\ARI.png" />
