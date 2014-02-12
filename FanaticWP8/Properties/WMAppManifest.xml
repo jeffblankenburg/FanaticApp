@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{40c659f3-038b-4e96-b24f-d16ed2323e34}" Title="Fanatic" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="FanaticWP8 author" Description="Sample description" Publisher="FanaticWP8" PublisherID="{e7c1727a-a9ad-4be9-8a15-a16feb60340f}">
+  <App xmlns="" ProductID="{40c659f3-038b-4e96-b24f-d16ed2323e34}" Title="Fanatic " RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="FanaticWP8 author" Description="This is my description." Publisher="FanaticWP8" PublisherID="{e7c1727a-a9ad-4be9-8a15-a16feb60340f}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
