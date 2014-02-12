@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Fanatic
 {
     public class User
     {
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://fanaticapp.azure-mobile.net/", "sCUZwWODAHEHZSpHUgaJhmWkAXLByB75");
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string ZipCode { get; set; }
