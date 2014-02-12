@@ -20,6 +20,10 @@ namespace Fanatic
         public Team MLS { get; set; }
         public Team MiLB { get; set; }
         public List<Ticket> Tickets = new List<Ticket>();
+        public string MicrosoftAccountID { get; set; }
+        public string GoogleAccountID { get; set; }
+        public string TwitterAccountID { get; set; }
+        public string FacebookAccountID { get; set; }
 
         public User()
         {
