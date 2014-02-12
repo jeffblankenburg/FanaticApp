@@ -12,6 +12,7 @@ using Fanatic;
 using System.Collections.Generic;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace FanaticWP8
 {
@@ -24,6 +25,7 @@ namespace FanaticWP8
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
         public static IsolatedStorageSettings Settings = IsolatedStorageSettings.ApplicationSettings;
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://fanaticapp.azure-mobile.net/", "sCUZwWODAHEHZSpHUgaJhmWkAXLByB75");
         public static User Fan;
         public static Ticket TicketBuilder = new Ticket();
 

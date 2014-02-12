@@ -323,6 +323,10 @@
     <Content Include="Assets\Logos\NHL\VAN.png" />
     <Content Include="Assets\Logos\NHL\WAS.png" />
     <Content Include="Assets\Logos\NHL\WIN.png" />
+    <Content Include="Assets\SocialMedia\Facebook_100.png" />
+    <Content Include="Assets\SocialMedia\Google_100.png" />
+    <Content Include="Assets\SocialMedia\Microsoft_100.png" />
+    <Content Include="Assets\SocialMedia\Twitter_100.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

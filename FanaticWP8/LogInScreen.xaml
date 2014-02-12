@@ -47,10 +47,10 @@
                 <Rectangle Grid.Column="2" Fill="#33FFFFFF" Height="90"/>
                 <Rectangle Grid.Column="4" Fill="#33FFFFFF" Height="90"/>
                 <Rectangle Grid.Column="6" Fill="#33FFFFFF" Height="90"/>
-                <Image Grid.Column="0" Source="Assets/SocialMedia/Microsoft_100.png" Height="80" />
-                <Image Grid.Column="2" Source="Assets/SocialMedia/Twitter_100.png" Height="80" />
-                <Image Grid.Column="4" Source="Assets/SocialMedia/Facebook_100.png" Height="80" />
-                <Image Grid.Column="6" Source="Assets/SocialMedia/Google_100.png" Height="80" />
+                <Image x:Name="Microsoft" Grid.Column="0" Source="Assets/SocialMedia/Microsoft_100.png" Height="80" Tap="Authenticate_Tap" />
+                <Image x:Name="Twitter" Grid.Column="2" Source="Assets/SocialMedia/Twitter_100.png" Height="80" Tap="Authenticate_Tap" />
+                <Image x:Name="Facebook" Grid.Column="4" Source="Assets/SocialMedia/Facebook_100.png" Height="80" Tap="Authenticate_Tap" />
+                <Image x:Name="Google" Grid.Column="6" Source="Assets/SocialMedia/Google_100.png" Height="80" Tap="Authenticate_Tap" />
             </Grid>
         </Grid>
     </Grid>
