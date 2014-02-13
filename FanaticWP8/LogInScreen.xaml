@@ -7,6 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:facebook="clr-namespace:Facebook;assembly=Facebook"
+    xmlns:facebookControls="clr-namespace:Facebook.Client.Controls;assembly=Facebook.Client"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -65,14 +67,33 @@
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
                 <Rectangle Grid.Column="0" Fill="#33FFFFFF" Height="90"/>
                 <Rectangle Grid.Column="2" Fill="#33FFFFFF" Height="90"/>
                 <Rectangle Grid.Column="4" Fill="#33FFFFFF" Height="90"/>
                 <Rectangle Grid.Column="6" Fill="#33FFFFFF" Height="90"/>
                 <Image x:Name="Microsoft" Grid.Column="0" Source="Assets/SocialMedia/Microsoft_100.png" Height="80" Tap="Authenticate_Tap" />
                 <Image x:Name="Twitter" Grid.Column="2" Source="Assets/SocialMedia/Twitter_100.png" Height="80" Tap="Authenticate_Tap" />
-                <Image x:Name="Facebook" Grid.Column="4" Source="Assets/SocialMedia/Facebook_100.png" Height="80" Tap="Authenticate_Tap" />
+                <facebookControls:LoginButton x:Name="FacebookButton" Grid.Column="4" ApplicationId="137042686448025" SessionStateChanged="FacebookSessionStateChanged" />
+                <!--<Image x:Name="Facebook" Grid.Column="4" Source="Assets/SocialMedia/Facebook_100.png" Height="80" Tap="Authenticate_Tap" />-->
                 <Image x:Name="Google" Grid.Column="6" Source="Assets/SocialMedia/Google_100.png" Height="80" Tap="Authenticate_Tap" />
+
+                <Grid x:Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="6" Margin="12,0,12,0" Visibility="Visible">
+                    <TextBlock FontSize="48" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Text="welcome"/>
+                </Grid>
+                <Grid x:Name="ContentPanel2" Grid.Row="2" Grid.ColumnSpan="6" Margin="12,0,12,0" Visibility="Visible">
+                    <TextBlock FontSize="48" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Text="{Binding CurrentUser.Name, ElementName=FacebookButton}"/>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>
