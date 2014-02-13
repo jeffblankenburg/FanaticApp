@@ -43,8 +43,11 @@
             </toolkit:NavigationOutTransition.Forward>
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
-    
-    <phone:Panorama Title="fanatic">
+
+    <phone:Panorama>
+        <phone:Panorama.Title>
+            <Image Source="Assets/Logo.png" Margin="0,50,0,0" />
+        </phone:Panorama.Title>
         <phone:PanoramaItem Header="your score">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -69,7 +72,7 @@
                 <Image Grid.Row="4" Source="Assets/Logos/NHL/CBJ.png" />
                 <TextBlock x:Name="Team3Score" Text="2,945" Grid.Row="4" Grid.Column="1" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <Rectangle Fill="White" Grid.Row="6" Grid.ColumnSpan="2" />
-                <TextBlock Text="TOTAL" Grid.Row="7" Grid.Column="0" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Text="TOTAL" Grid.Row="7" Grid.Column="0" FontFamily="Assets/Fonts/BEBAS___.TTF#Bebas" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <TextBlock x:Name="TotalScore" Text="9,953" Grid.Row="7" Grid.Column="1" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <TextBlock x:Name="animationTarget" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="267,101,0,0" Grid.Row="8" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
                     <TextBlock.RenderTransform>

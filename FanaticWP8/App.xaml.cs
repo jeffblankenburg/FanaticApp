@@ -367,7 +367,24 @@ namespace FanaticWP8
             new Venue{ Id = 106,Capacity = 22076, OpeningYear = 1988, Name = "The Palace of Auburn Hills"},
             new Venue{ Id = 107,Capacity = 19077, OpeningYear = 2005, Name = "Time Warner Cable Arena"},
             new Venue{ Id = 108,Capacity = 18023, OpeningYear = 2003, Name = "Toyota Center"},
-            new Venue{ Id = 109,Capacity = 18422, OpeningYear = 1992, Name = "US Airways Center"}
+            new Venue{ Id = 109,Capacity = 18422, OpeningYear = 1992, Name = "US Airways Center"},
+            //MLS
+            new Venue{ Id = 110,Capacity = 22000, OpeningYear = 2012, Name = "BBVA Compass Stadium"},
+            new Venue{ Id = 111,Capacity = 21000, OpeningYear = 1983, Name = "BC Place"},
+            new Venue{ Id = 112,Capacity = 21859, OpeningYear = 2007, Name = "BMO Field"},
+            new Venue{ Id = 113,Capacity = 10525, OpeningYear = 1962, Name = "Buck Shaw Stadium"},
+            new Venue{ Id = 114,Capacity = 20145, OpeningYear = 1999, Name = "Columbus Crew Stadium"},
+            new Venue{ Id = 115,Capacity = 17424, OpeningYear = 2007, Name = "Dick's Sporting Goods Park"},
+            new Venue{ Id = 116,Capacity = 18500, OpeningYear = 2010, Name = "PPL Park"},
+            new Venue{ Id = 117,Capacity = 20674, OpeningYear = 1926, Name = "Providence Park"},
+            new Venue{ Id = 118,Capacity = 19647, OpeningYear = 1961, Name = "RFK Stadium"},
+            new Venue{ Id = 119,Capacity = 25000, OpeningYear = 2010, Name = "Red Bull Arena"},
+            new Venue{ Id = 120,Capacity = 20213, OpeningYear = 2008, Name = "Rio Tinto Stadium"},
+            new Venue{ Id = 121,Capacity = 20521, OpeningYear = 2008, Name = "Saputo Stadium"},
+            new Venue{ Id = 122,Capacity = 18467, OpeningYear = 2011, Name = "Sporting Park"},
+            new Venue{ Id = 123,Capacity = 27000, OpeningYear = 2003, Name = "StubHub Center"},
+            new Venue{ Id = 124,Capacity = 20000, OpeningYear = 2006, Name = "Toyota Park"},
+            new Venue{ Id = 125,Capacity = 20500, OpeningYear = 2005, Name = "Toyota Stadium"}
         };
 
         public static List<Team> MLB = new List<Team>
@@ -476,25 +493,25 @@ namespace FanaticWP8
 
         public static List<Team> MLS = new List<Team>
         { 
-            new Team { League = "MLS", Abbreviation = "CHI", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Chicago", Mascot = "Fire" },
-            new Team { League = "MLS", Abbreviation = "CHV", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Chivas", Mascot = "USA" },
-            new Team { League = "MLS", Abbreviation = "CLB", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Columbus", Mascot = "Crew" },
-            new Team { League = "MLS", Abbreviation = "COL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Colorado", Mascot = "Rapids" },
-            new Team { League = "MLS", Abbreviation = "DAL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "FC", Mascot = "Dallas" },
-            new Team { League = "MLS", Abbreviation = "DC",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "D.C.", Mascot = "United" },
-            new Team { League = "MLS", Abbreviation = "HOU", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Houston", Mascot = "Dynamo" },
-            new Team { League = "MLS", Abbreviation = "KC",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Sporting", Mascot = "Kansas City" },
-            new Team { League = "MLS", Abbreviation = "LA",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Los Angeles", Mascot = "Galaxy" },
-            new Team { League = "MLS", Abbreviation = "MON", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Montreal", Mascot = "Impact" },
-            new Team { League = "MLS", Abbreviation = "NE",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "New England", Mascot = "Revolution" },
-            new Team { League = "MLS", Abbreviation = "NY",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "New York", Mascot = "Red Bulls" },
-            new Team { League = "MLS", Abbreviation = "PHI", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Philadelphia Union", Mascot = "Angels" },
-            new Team { League = "MLS", Abbreviation = "POR", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Portland", Mascot = "Timbers" },
-            new Team { League = "MLS", Abbreviation = "RSL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Real", Mascot = "Salt Lake" },
-            new Team { League = "MLS", Abbreviation = "SEA", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Seattle", Mascot = "Sounders" },
-            new Team { League = "MLS", Abbreviation = "SJ",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "San Jose", Mascot = "Earthquakes" },
-            new Team { League = "MLS", Abbreviation = "TOR", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Toronto", Mascot = "FC" },
-            new Team { League = "MLS", Abbreviation = "VAN", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Vancouver", Mascot = "Whitecaps FC" }
+            new Team { HomeVenue = Venues[124],League = "MLS", Abbreviation = "CHI", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Chicago", Mascot = "Fire" },
+            new Team { HomeVenue = Venues[123],League = "MLS", Abbreviation = "CHV", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Chivas", Mascot = "USA" },
+            new Team { HomeVenue = Venues[114],League = "MLS", Abbreviation = "CLB", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Columbus", Mascot = "Crew" },
+            new Team { HomeVenue = Venues[115],League = "MLS", Abbreviation = "COL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Colorado", Mascot = "Rapids" },
+            new Team { HomeVenue = Venues[125],League = "MLS", Abbreviation = "DAL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "FC", Mascot = "Dallas" },
+            new Team { HomeVenue = Venues[118],League = "MLS", Abbreviation = "DC",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "D.C.", Mascot = "United" },
+            new Team { HomeVenue = Venues[110],League = "MLS", Abbreviation = "HOU", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Houston", Mascot = "Dynamo" },
+            new Team { HomeVenue = Venues[122],League = "MLS", Abbreviation = "KC",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Sporting", Mascot = "Kansas City" },
+            new Team { HomeVenue = Venues[123],League = "MLS", Abbreviation = "LA",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Los Angeles", Mascot = "Galaxy" },
+            new Team { HomeVenue = Venues[121],League = "MLS", Abbreviation = "MON", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Montreal", Mascot = "Impact" },
+            new Team { HomeVenue = Venues[46], League = "MLS", Abbreviation = "NE",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "New England", Mascot = "Revolution" },
+            new Team { HomeVenue = Venues[119],League = "MLS", Abbreviation = "NY",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "New York", Mascot = "Red Bulls" },
+            new Team { HomeVenue = Venues[116],League = "MLS", Abbreviation = "PHI", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Philadelphia Union", Mascot = "Angels" },
+            new Team { HomeVenue = Venues[117],League = "MLS", Abbreviation = "POR", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Portland", Mascot = "Timbers" },
+            new Team { HomeVenue = Venues[120],League = "MLS", Abbreviation = "RSL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Real", Mascot = "Salt Lake" },
+            new Team { HomeVenue = Venues[50], League = "MLS", Abbreviation = "SEA", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Seattle", Mascot = "Sounders" },
+            new Team { HomeVenue = Venues[113],League = "MLS", Abbreviation = "SJ",  PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "San Jose", Mascot = "Earthquakes" },
+            new Team { HomeVenue = Venues[112],League = "MLS", Abbreviation = "TOR", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Toronto", Mascot = "FC" },
+            new Team { HomeVenue = Venues[111],League = "MLS", Abbreviation = "VAN", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Vancouver", Mascot = "Whitecaps FC" }
         };
 
         public static List<Team> NBA = new List<Team> 
@@ -533,7 +550,7 @@ namespace FanaticWP8
 
         public static List<Team> MiLB = new List<Team>
         {
-            new Team { HomeVenue = Venues[00], League = "MiLB", Abbreviation = "ATL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Atlanta", Mascot = "Hawks" },
+            //new Team { HomeVenue = Venues[00], League = "MiLB", Abbreviation = "ATL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Atlanta", Mascot = "Hawks" },
         };
 
         //http://en.wikipedia.org/wiki/List_of_Premier_League_clubs

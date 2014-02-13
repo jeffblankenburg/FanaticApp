@@ -20,9 +20,9 @@ namespace FanaticWP8
 
         private void Authenticate_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Image i = sender as Image;
-            CheckAuthentication(i);
-            
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            //Image i = sender as Image;
+            //CheckAuthentication(i);
         }
 
         private async void CheckAuthentication(Image i)
@@ -30,6 +30,7 @@ namespace FanaticWP8
             if (i.Name.Contains("Microsoft")) await Authenticate(MobileServiceAuthenticationProvider.MicrosoftAccount);
             else if (i.Name.Contains("Facebook")) await Authenticate(MobileServiceAuthenticationProvider.Facebook);
             else if (i.Name.Contains("Twitter")) await Authenticate(MobileServiceAuthenticationProvider.Twitter);
+            else if (i.Name.Contains("Google")) await Authenticate(MobileServiceAuthenticationProvider.Google);
         }
 
         private MobileServiceUser user;
