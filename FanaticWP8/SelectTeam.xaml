@@ -40,7 +40,7 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" Text="which  team?" FontSize="60" VerticalAlignment="Center"  Margin="10,0,0,0" FontFamily="Assets/Fonts/BEBAS___.TTF#Bebas" />
+        <TextBlock x:Name="textBlock" Text="which  team?" FontSize="60" VerticalAlignment="Center"  Margin="10,0,0,0" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
         <ScrollViewer Grid.Row="1">
             <toolkit:WrapPanel x:Name="TeamPanel" Grid.Row="1" HorizontalAlignment="Center">
                 

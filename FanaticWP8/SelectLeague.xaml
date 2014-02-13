@@ -41,14 +41,14 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" Text="which  league?" FontSize="60" VerticalAlignment="Center"  Margin="10,0,0,0" FontFamily="Assets/Fonts/BEBAS___.TTF#Bebas" />
+        <TextBlock x:Name="textBlock" Text="which  league?" FontSize="60" VerticalAlignment="Center"  Margin="10,0,0,0" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
         <toolkit:WrapPanel x:Name="wrapPanel" Grid.Row="1" HorizontalAlignment="Center">
             <Image Source="Assets/Logos/MLB/MLB.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/NFL/NFL.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/NHL/NHL.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/NBA/NBA.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
             <Image Source="Assets/Logos/MLS/MLS.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
-            <Image Source="Assets/Logos/MiLB/MiLB.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
+            <Image Source="Assets/Logos/FAPL/FAPL.png" Width="200" Margin="0,0,20,20" Tap="League_Tap" />
         </toolkit:WrapPanel>
     </Grid>
 

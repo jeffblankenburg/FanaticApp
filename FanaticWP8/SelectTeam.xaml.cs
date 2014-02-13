@@ -69,6 +69,9 @@ namespace FanaticWP8
                 case "MiLB":
                     CurrentTeams = App.MiLB;
                     break;
+                case "FAPL":
+                    CurrentTeams = App.FAPL;
+                    break;
             }
 
             foreach (Team t in CurrentTeams)
@@ -99,6 +102,9 @@ namespace FanaticWP8
                     break;
                 case "MiLB":
                     App.Fan.MiLB = t;
+                    break;
+                case "FAPL":
+                    App.Fan.FAPL = t;
                     break;
             }
             App.Settings["Fan"] = App.Fan;

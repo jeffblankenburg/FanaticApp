@@ -32,9 +32,26 @@ namespace FanaticWP8
         {
             base.OnNavigatedTo(e);
             TwentiethOfASecond.Completed += TwentiethOfASecond_Completed;
-            DisplayTotals();
+            PopulateScorePanorama();
             PopulateTeamPanorama();
             PopulateTicketPanorama();
+        }
+
+        private void PopulateScorePanorama()
+        {
+            Uri uri = new Uri("Assets/Logos/" + App.Fan.NFL.League + "/" + App.Fan.NFL.Abbreviation + ".png", UriKind.Relative);
+            ImageSource imageSource = new BitmapImage(uri);
+            Team1Logo.Source = imageSource;
+
+            uri = new Uri("Assets/Logos/" + App.Fan.MLB.League + "/" + App.Fan.MLB.Abbreviation + ".png", UriKind.Relative);
+            imageSource = new BitmapImage(uri);
+            Team2Logo.Source = imageSource;
+
+            uri = new Uri("Assets/Logos/" + App.Fan.MLS.League + "/" + App.Fan.MLS.Abbreviation + ".png", UriKind.Relative);
+            imageSource = new BitmapImage(uri);
+            Team3Logo.Source = imageSource;
+
+            DisplayTotals();
         }
 
         private void PopulateTicketPanorama()
@@ -168,6 +185,11 @@ namespace FanaticWP8
             if (App.Fan.MiLB.Abbreviation != "NONE")
             {
                 Team t = App.Fan.MiLB;
+                TeamPanel.Children.Add(BuildImage(t));
+            }
+            if (App.Fan.FAPL.Abbreviation != "NONE")
+            {
+                Team t = App.Fan.FAPL;
                 TeamPanel.Children.Add(BuildImage(t));
             }
         }

@@ -18,5 +18,7 @@ namespace Fanatic
         public Surface SurfaceType { get; set; }
         public RoofType RoofType { get; set; }
         public int OpeningYear { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

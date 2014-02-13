@@ -384,7 +384,28 @@ namespace FanaticWP8
             new Venue{ Id = 122,Capacity = 18467, OpeningYear = 2011, Name = "Sporting Park"},
             new Venue{ Id = 123,Capacity = 27000, OpeningYear = 2003, Name = "StubHub Center"},
             new Venue{ Id = 124,Capacity = 20000, OpeningYear = 2006, Name = "Toyota Park"},
-            new Venue{ Id = 125,Capacity = 20500, OpeningYear = 2005, Name = "Toyota Stadium"}
+            new Venue{ Id = 125,Capacity = 20500, OpeningYear = 2005, Name = "Toyota Stadium"},
+            //FAPL
+            new Venue{ Id = 126,Capacity = 45362, OpeningYear = 1884, Name = "Anfield", Latitude=53.430833, Longitude=-2.960833, City="Liverpool"},
+            new Venue{ Id = 127,Capacity = 35303, OpeningYear = 1904, Name = "Boleyn Ground", Latitude=51.531944, Longitude=0.039444, City="London"},
+            new Venue{ Id = 128,Capacity = 28383, OpeningYear = 1997, Name = "Brittania Stadium", Latitude=52.988333, Longitude=-2.175556, City="Stoke-on-Trent"},
+            new Venue{ Id = 129,Capacity = 26828, OpeningYear = 2009, Name = "Cardiff City Stadium", Latitude=0, Longitude=0, City="Cardiff"},
+            new Venue{ Id = 130,Capacity = 27033, OpeningYear = 1935, Name = "Carrow Road", Latitude=0, Longitude=0, City="Norwich"},
+            new Venue{ Id = 131,Capacity = 47726, OpeningYear = 2003, Name = "City of Manchester Stadium", Latitude=0, Longitude=0, City="Manchester"},
+            new Venue{ Id = 132,Capacity = 25700, OpeningYear = 1896, Name = "Craven Cottage", Latitude=0, Longitude=0, City="London"},
+            new Venue{ Id = 133,Capacity = 60355, OpeningYear = 2006, Name = "Emirates Stadium", Latitude=0, Longitude=0, City="London"},
+            new Venue{ Id = 134,Capacity = 40157, OpeningYear = 1892, Name = "Goodison Park", Latitude=0, Longitude=0, City="Liverpool"},
+            new Venue{ Id = 135,Capacity = 26500, OpeningYear = 1900, Name = "The Hawthorns", Latitude=0, Longitude=0, City="West Bromwich"},
+            new Venue{ Id = 136,Capacity = 25404, OpeningYear = 2002, Name = "KC Stadium", Latitude=0, Longitude=0, City="Kingston upon Hull"},
+            new Venue{ Id = 137,Capacity = 20532, OpeningYear = 2005, Name = "Liberty Stadium", Latitude=0, Longitude=0, City="Swansea"},
+            new Venue{ Id = 138,Capacity = 76212, OpeningYear = 1910, Name = "Old Trafford", Latitude=0, Longitude=0, City="Manchester"},
+            new Venue{ Id = 139,Capacity = 52387, OpeningYear = 1880, Name = "St. James' Park", Latitude=0, Longitude=0, City="Newcastle"},
+            new Venue{ Id = 140,Capacity = 32689, OpeningYear = 2001, Name = "St. Mary's Stadium", Latitude=0, Longitude=0, City="Southampton"},
+            new Venue{ Id = 141,Capacity = 26309, OpeningYear = 1924, Name = "Selhurst Park", Latitude=0, Longitude=0, City="London"},
+            new Venue{ Id = 142,Capacity = 49000, OpeningYear = 1997, Name = "Stadium of Light", Latitude=0, Longitude=0, City="Sunderland"},
+            new Venue{ Id = 143,Capacity = 42055, OpeningYear = 1877, Name = "Stamford Bridge", Latitude=0, Longitude=0, City="London"},
+            new Venue{ Id = 144,Capacity = 42788, OpeningYear = 1897, Name = "Villa Park", Latitude=0, Longitude=0, City="Birmingham"},
+            new Venue{ Id = 145,Capacity = 36310, OpeningYear = 1899, Name = "White Hart Lane", Latitude=0, Longitude=0, City="London"},
         };
 
         public static List<Team> MLB = new List<Team>
@@ -554,7 +575,29 @@ namespace FanaticWP8
         };
 
         //http://en.wikipedia.org/wiki/List_of_Premier_League_clubs
-        public static List<Team> FAPL = new List<Team>();
+        public static List<Team> FAPL = new List<Team>
+        {
+            new Team { HomeVenue = Venues[133],League = "FAPL", Abbreviation = "ARS", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Arsenal", Mascot = "" },
+            new Team { HomeVenue = Venues[143],League = "FAPL", Abbreviation = "CHE", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Chelsea", Mascot = "" },
+            new Team { HomeVenue = Venues[131],League = "FAPL", Abbreviation = "MCI", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Manchester City", Mascot = "" },
+            new Team { HomeVenue = Venues[126],League = "FAPL", Abbreviation = "LIV", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Liverpool", Mascot = "" },
+            new Team { HomeVenue = Venues[145],League = "FAPL", Abbreviation = "TOT", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Tottenham Hotspur", Mascot = "" },
+            new Team { HomeVenue = Venues[134],League = "FAPL", Abbreviation = "EVE", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Everton", Mascot = "" },
+            new Team { HomeVenue = Venues[138],League = "FAPL", Abbreviation = "MUN", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Manchester United", Mascot = "" },
+            new Team { HomeVenue = Venues[140],League = "FAPL", Abbreviation = "SOU", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Southampton", Mascot = "" },
+            new Team { HomeVenue = Venues[139],League = "FAPL", Abbreviation = "NEW", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Newcastle United", Mascot = "" },
+            new Team { HomeVenue = Venues[137],League = "FAPL", Abbreviation = "SWA", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Swansea City", Mascot = "" },
+            new Team { HomeVenue = Venues[127],League = "FAPL", Abbreviation = "WHU", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "West Ham United", Mascot = "" },
+            new Team { HomeVenue = Venues[144],League = "FAPL", Abbreviation = "AVL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Aston Villa", Mascot = "" },
+            new Team { HomeVenue = Venues[136],League = "FAPL", Abbreviation = "HUL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Hull City", Mascot = "" },
+            new Team { HomeVenue = Venues[128],League = "FAPL", Abbreviation = "STK", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Stoke City", Mascot = "" },
+            new Team { HomeVenue = Venues[141],League = "FAPL", Abbreviation = "CRY", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Crystal Palace", Mascot = "" },
+            new Team { HomeVenue = Venues[130],League = "FAPL", Abbreviation = "NOR", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Norwich City", Mascot = "" },
+            new Team { HomeVenue = Venues[135],League = "FAPL", Abbreviation = "WBA", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "West Bromwich Albion", Mascot = "" },
+            new Team { HomeVenue = Venues[142],League = "FAPL", Abbreviation = "SUN", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Sunderland", Mascot = "" },
+            new Team { HomeVenue = Venues[129],League = "FAPL", Abbreviation = "CAR", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Cardiff City", Mascot = "" },
+            new Team { HomeVenue = Venues[132],League = "FAPL", Abbreviation = "FUL", PrimaryColor = "", SecondaryColor = "", TertiaryColor = "", City = "Fulham", Mascot = "" }
+        };
 
         internal static System.Windows.Media.Brush GetBackground(string league)
         {

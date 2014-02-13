@@ -64,6 +64,10 @@ namespace FanaticWP8
             {
                 NavigationService.Navigate(new Uri("/" + ActionPage + "?league=MiLB", UriKind.Relative));
             }
+            else if (bi.UriSource.ToString().Contains("FAPL"))
+            {
+                NavigationService.Navigate(new Uri("/" + ActionPage + "?league=FAPL", UriKind.Relative));
+            }
         }
     }
 }

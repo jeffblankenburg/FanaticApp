@@ -19,6 +19,7 @@ namespace Fanatic
         public Team NHL { get; set; }
         public Team MLS { get; set; }
         public Team MiLB { get; set; }
+        public Team FAPL { get; set; }
         public List<Ticket> Tickets = new List<Ticket>();
         public string MicrosoftAccountID { get; set; }
         public string GoogleAccountID { get; set; }
@@ -33,6 +34,7 @@ namespace Fanatic
             NHL = new Team { Abbreviation = "NONE" };
             MLS = new Team { Abbreviation = "NONE" };
             MiLB = new Team { Abbreviation = "NONE" };
+            FAPL = new Team { Abbreviation = "NONE" };
         }
     }
 }
