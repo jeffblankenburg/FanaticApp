@@ -45,10 +45,10 @@ namespace FanaticWP8
                         ProfilePicture.Source = new BitmapImage(new Uri(profilePictureUrl));
                         FirstNameBox.Text = result["first_name"].ToString();
                         LastNameBox.Text = result["last_name"].ToString();
-                        GenderBox.Text = result["gender"].ToString();
+                        if (result["gender"].ToString().ToLower() == "male")
+                            GenderPicker.SelectedIndex = 1;
 
                         var location = (IDictionary<string, object>)result["location"];
-                        var locationID = location["id"];
                         LocationBox.Text = location["name"].ToString();
                         //var favoriteteams = (List<IDictionary<string, object>>)result["favorite_teams"];
                     }

@@ -6,12 +6,34 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -24,7 +46,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="40"/>
@@ -47,7 +69,10 @@
         <TextBox x:Name="LastNameBox" Grid.Column="1" Grid.Row="6" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
 
         <TextBlock Grid.Column="1" Grid.Row="7" Text="GENDER" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
-        <TextBox x:Name="GenderBox" Grid.Column="1" Grid.Row="8" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <toolkit:ListPicker x:Name="GenderPicker" Grid.Column="1" Grid.Row="8" Margin="0, -5, 0, 0" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas">
+            <toolkit:ListPickerItem Content="FEMALE" />
+            <toolkit:ListPickerItem Content="MALE" />
+        </toolkit:ListPicker>
 
         <TextBlock Grid.Column="1" Grid.Row="9" Text="LOCATION" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
         <TextBox x:Name="LocationBox" Grid.Column="1" Grid.Row="10" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
