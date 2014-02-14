@@ -69,10 +69,10 @@ namespace FanaticWP8
             try
             {
                 FacebookSession = await App.FacebookSessionClient.LoginAsync("user_about_me,read_stream");
-                App.AccessToken = FacebookSession.AccessToken;
+                App.FacebookAccessToken = FacebookSession.AccessToken;
                 App.FacebookId = FacebookSession.FacebookId;
 
-                Dispatcher.BeginInvoke(() => NavigationService.Navigate(new Uri("Register.xaml", UriKind.Relative)));
+                Dispatcher.BeginInvoke(() => NavigationService.Navigate(new Uri("/Register.xaml", UriKind.Relative)));
 
             }
             catch (InvalidOperationException e)

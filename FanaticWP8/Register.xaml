@@ -17,10 +17,49 @@
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="textBlock" Text="register" FontSize="60" VerticalAlignment="Center"  Margin="10,0,0,0" FontFamily="Assets/Fonts/BEBAS___.TTF#Bebas" />
+        <TextBlock Grid.Column="1" x:Name="textBlock" Text="register" FontSize="60" VerticalAlignment="Center" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="PROFILE  PICTURE" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <Image Grid.Column="1" Grid.Row="2" x:Name="ProfilePicture" Width="120" Height="120" HorizontalAlignment="Left" />
+
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="FIRST  NAME" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <TextBox x:Name="FirstNameBox" Grid.Column="1" Grid.Row="4" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="LAST  NAME" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <TextBox x:Name="LastNameBox" Grid.Column="1" Grid.Row="6" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="GENDER" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <TextBox x:Name="GenderBox" Grid.Column="1" Grid.Row="8" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+
+        <TextBlock Grid.Column="1" Grid.Row="9" Text="LOCATION" VerticalAlignment="Bottom" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
+        <TextBox x:Name="LocationBox" Grid.Column="1" Grid.Row="10" Margin="-10" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" />
     </Grid>
-
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/cancel.png" Text="cancel" Click="CancelButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/save.png" Text="save" Click="SaveButton_Click"/>
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

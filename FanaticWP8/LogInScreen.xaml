@@ -56,7 +56,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="LOG  IN  WITH:" FontFamily="Assets/Fonts/BEBAS___.TTF#Bebas" Margin="0,0,0,5" />
+            <TextBlock Text="LOG  IN  WITH:" FontFamily="/FanaticWP8;component/Assets/Fonts/Fonts.zip#Bebas" Margin="0,0,0,5" />
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />

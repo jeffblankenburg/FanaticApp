@@ -31,7 +31,7 @@ namespace FanaticWP8
         public static User Fan;
         public static Ticket TicketBuilder = new Ticket();
         public static readonly string FacebookAppId = "137042686448025";
-        internal static string AccessToken = String.Empty;
+        internal static string FacebookAccessToken = String.Empty;
         internal static string FacebookId = String.Empty;
         public static bool IsFacebookAuthenticated = false;
         public static FacebookSessionClient FacebookSessionClient = new FacebookSessionClient(FacebookAppId);
