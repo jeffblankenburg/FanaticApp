@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using Microsoft.WindowsAzure.MobileServices;
 using Facebook.Client;
 using System.Threading.Tasks;
+using TweetSharp;
 
 namespace FanaticWP8
 {
@@ -35,6 +36,8 @@ namespace FanaticWP8
         internal static string FacebookId = String.Empty;
         public static bool IsFacebookAuthenticated = false;
         public static FacebookSessionClient FacebookSessionClient = new FacebookSessionClient(FacebookAppId);
+
+
 
         /// <summary>
         /// Constructor for the Application object.
