@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.WindowsAzure.MobileServices;
+using Facebook.Client;
+using System.Threading.Tasks;
 
 namespace FanaticWP8
 {
@@ -28,6 +30,11 @@ namespace FanaticWP8
         public static MobileServiceClient MobileService = new MobileServiceClient("https://fanaticapp.azure-mobile.net/", "sCUZwWODAHEHZSpHUgaJhmWkAXLByB75");
         public static User Fan;
         public static Ticket TicketBuilder = new Ticket();
+        public static readonly string FacebookAppId = "137042686448025";
+        internal static string AccessToken = String.Empty;
+        internal static string FacebookId = String.Empty;
+        public static bool IsFacebookAuthenticated = false;
+        public static FacebookSessionClient FacebookSessionClient = new FacebookSessionClient(FacebookAppId);
 
         /// <summary>
         /// Constructor for the Application object.

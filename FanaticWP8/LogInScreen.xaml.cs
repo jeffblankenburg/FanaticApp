@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.WindowsAzure.MobileServices;
+using Facebook.Client;
+using System.Threading.Tasks;
 
 namespace FanaticWP8
 {
@@ -20,9 +22,9 @@ namespace FanaticWP8
 
         private void Authenticate_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
-            //Image i = sender as Image;
-            //CheckAuthentication(i);
+            //NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            Image i = sender as Image;
+            CheckAuthentication(i);
         }
 
         private async void CheckAuthentication(Image i)
@@ -30,9 +32,10 @@ namespace FanaticWP8
             if (i.Name.Contains("Microsoft")) await Authenticate(MobileServiceAuthenticationProvider.MicrosoftAccount);
             else if (i.Name.Contains("Facebook"))
             {
-                string path = "fbconnect://authorize?client_id={137042686448025}&redirect_uri=msft-{f1f9b070-f351-499a-8a12-2ccee6095f76}:";
-                Uri uri = new Uri(path);
-                var success = await Windows.System.Launcher.LaunchUriAsync(uri);
+                await AuthenticateFacebook();
+                //string path = "fbconnect://authorize?client_id={137042686448025}&redirect_uri=msft-{f1f9b070-f351-499a-8a12-2ccee6095f76}:";
+                //Uri uri = new Uri(path);
+                //var success = await Windows.System.Launcher.LaunchUriAsync(uri);
             }//await Authenticate(MobileServiceAuthenticationProvider.Facebook);
             else if (i.Name.Contains("Twitter")) await Authenticate(MobileServiceAuthenticationProvider.Twitter);
             else if (i.Name.Contains("Google")) await Authenticate(MobileServiceAuthenticationProvider.Google);
@@ -60,10 +63,22 @@ namespace FanaticWP8
             }
         }
 
-        private void FacebookSessionStateChanged(object sender, Facebook.Client.Controls.SessionStateChangedEventArgs e)
+        private FacebookSession FacebookSession;
+        private async Task AuthenticateFacebook()
         {
-            this.ContentPanel.Visibility = (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened) ?
-                                Visibility.Visible : Visibility.Collapsed;
+            try
+            {
+                FacebookSession = await App.FacebookSessionClient.LoginAsync("user_about_me,read_stream");
+                App.AccessToken = FacebookSession.AccessToken;
+                App.FacebookId = FacebookSession.FacebookId;
+
+                Dispatcher.BeginInvoke(() => NavigationService.Navigate(new Uri("Register.xaml", UriKind.Relative)));
+
+            }
+            catch (InvalidOperationException e)
+            {
+
+            }
         }
     }
 }

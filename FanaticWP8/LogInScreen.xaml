@@ -78,11 +78,11 @@
                 <Rectangle Grid.Column="6" Fill="#33FFFFFF" Height="90"/>
                 <Image x:Name="Microsoft" Grid.Column="0" Source="Assets/SocialMedia/Microsoft_100.png" Height="80" Tap="Authenticate_Tap" />
                 <Image x:Name="Twitter" Grid.Column="2" Source="Assets/SocialMedia/Twitter_100.png" Height="80" Tap="Authenticate_Tap" />
-                <facebookControls:LoginButton x:Name="FacebookButton" Grid.Column="4" ApplicationId="137042686448025" SessionStateChanged="FacebookSessionStateChanged" />
-                <!--<Image x:Name="Facebook" Grid.Column="4" Source="Assets/SocialMedia/Facebook_100.png" Height="80" Tap="Authenticate_Tap" />-->
+                <!--<facebookControls:LoginButton x:Name="FacebookButton" Grid.Column="4" ApplicationId="137042686448025" SessionStateChanged="FacebookSessionStateChanged" />-->
+                <Image x:Name="Facebook" Grid.Column="4" Source="Assets/SocialMedia/Facebook_100.png" Height="80" Tap="Authenticate_Tap" />
                 <Image x:Name="Google" Grid.Column="6" Source="Assets/SocialMedia/Google_100.png" Height="80" Tap="Authenticate_Tap" />
 
-                <Grid x:Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="6" Margin="12,0,12,0" Visibility="Visible">
+                <!--<Grid x:Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="6" Margin="12,0,12,0" Visibility="Visible">
                     <TextBlock FontSize="48" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Center" 
@@ -93,7 +93,7 @@
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Center" 
                 Text="{Binding CurrentUser.Name, ElementName=FacebookButton}"/>
-                </Grid>
+                </Grid>-->
             </Grid>
         </Grid>
     </Grid>
